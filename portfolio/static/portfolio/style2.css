@@ -1,0 +1,33 @@
+/* style.css */
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    width: 480px;
+    height: 320px;
+    padding: 5px;
+
+}
+
+.image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    text-align: center;
+}

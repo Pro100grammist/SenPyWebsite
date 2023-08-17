@@ -1,0 +1,36 @@
+{% extends 'portfolio/base.html'%}
+
+{% load static %}
+
+{% block extra_styles %}
+    <link rel="stylesheet" href="{% static 'portfolio/style2.css' %}">
+{% endblock %}
+
+
+{% block content %}
+    <h1>My "Wall of Weeping"</h1>
+    <br>
+    <div class="image-gallery">
+        <a href="https://testprovider.com/ru/search-certificate/tp94083226" class="image-item" target="_blank">
+            <img class="image" src="{% static 'portfolio/about/eng.png' %}" alt="Englishdom certificate">
+        </a>
+        <a href="https://certs.prometheus.org.ua/downloads/a6b4413491f444b99604fb1dcea69959/Certificate.pdf" class="image-item" target="_blank">
+            <img class="image" src="{% static 'portfolio/about/git_cert.png' %}" alt="Prometheus certificate Git">
+        </a>
+        <a href="" class="image-item">
+            <img class="image" src="{% static 'portfolio/about/eng2.png' %}" alt="btc certificate it-eng">
+        </a>
+        <a href="https://testprovider.com/ru/search-certificate/tp66859821" class="image-item" target="_blank">
+            <img class="image" src="{% static 'portfolio/about/git_itvdn.png' %}" alt="ITVDN certificate Git Basic">
+        </a>
+        <a href="https://testprovider.com/ru/search-certificate/TP68005796" class="image-item" target="_blank">
+            <img class="image" src="{% static 'portfolio/about/linux_itvdn.png' %}" alt="ITVDN certificate Linux administration basics">
+        </a>
+        <a href="https://testprovider.com/ru/search-certificate/TP61356911" class="image-item" target="_blank">
+            <img class="image" src="{% static 'portfolio/about/html_css_itvdn.png' %}" alt="ITVDN certificate HTML5 CSS3 Starter">
+        </a>
+        <a href="https://testprovider.com/ru/search-certificate/TP17604341" class="image-item" target="_blank">
+            <img class="image" src="{% static 'portfolio/about/java_itvdn.png' %}" alt="ITVDN certificate Java Basic">
+        </a>
+    </div>
+{% endblock %}
