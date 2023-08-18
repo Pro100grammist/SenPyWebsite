@@ -1,4 +1,5 @@
 .env
+key.py
 *.log
 *.pot
 *.pyc
