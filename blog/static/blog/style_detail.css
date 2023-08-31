@@ -1,0 +1,32 @@
+/*body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 10; *//* Відступи від країв браузера *//*
+}*/
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  margin-left: 75px;
+}
+
+.article-content {
+  /*max-width: 800px;*/
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.footer {
+  margin-top: auto;
+  height: 100px;
+}

@@ -1,8 +1,45 @@
-.article-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    font-size: 16px;
-    line-height: 1.8;
-    margin-top: 20px;
+
+
+/* Стилі для горизонтального центрування панелі пагінації */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Стилі для елементів панелі пагінації */
+.pagination a {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Стилі для номера сторінки, який обрамляється */
+.pagination .current {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Стилі для ефекту натискання на кнопку */
+.pagination a:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Стилі для активної сторінки */
+.pagination .current a {
+  background-color: #007bff;
+  color: #fff;
 }

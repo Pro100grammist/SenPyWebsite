@@ -1,6 +1,7 @@
 <!Doctype html>
 {% load static %}
-<html lang="en">
+{% load i18n %}
+<html lang="{{ request.LANGUAGE_CODE }}">
 
   <head>
     <!-- Required meta tags -->
@@ -45,7 +46,7 @@
         <div class="collapse navbar-collapse text-center" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'about' %}">About</a>
+              <a class="nav-link" href="{% url 'about' %}">{{ _("About") }}</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{% static 'portfolio/cv.pdf' %}" target="_blank">Resume</a>
@@ -61,10 +62,14 @@
             </li>
 
           </ul>
-          <form class="d-flex">
+          <form class="d-flex search-field">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-info" type="submit">Search</button>
           </form>
+        </div>
+        <div class="language-switcher">
+          <a href="?language=en" class="language-option">English</a>
+          <a href="?language=uk" class="language-option">Українська</a>
         </div>
       </div>
     </nav>
@@ -77,7 +82,7 @@
         <div class="row">
           <div class="col-md-6">
             <p>&copy; 2023 SenPy Interactive. All rights reserved.</p>
-            <p>Developed and contributed by Pro100grammer [Oleh Sencha].</p>
+            <p>{% trans "Developed and contributed by Pro100grammer [Oleh Sencha]" %}.</p>
           </div>
           <div class="col-md-6">
             <p>Contacts: senpy@gmail.com | @Pro100grammer</p>

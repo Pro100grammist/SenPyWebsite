@@ -23,8 +23,31 @@
 }
 
 .img-fluid {
-  max-width: 90%;
+  max-width: 100%;
   height: auto;
+}
+
+.language-switcher {
+  display: flex;
+  gap: 10px;
+}
+
+.language-option {
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.language-option:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.search-field {
+    margin-right: 20px;
 }
 
 body {
@@ -44,10 +67,11 @@ body {
     }
 }
 
-footer {
-
+.footer {
     background-color: #333;
     padding: 10px;
     color: white;
     text-align: none;
+    margin-top: auto;
+    height: 100px;
 }
