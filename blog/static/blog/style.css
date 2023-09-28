@@ -1,6 +1,4 @@
-
-
-/* Стилі для горизонтального центрування панелі пагінації */
+/* Styles for horizontal centering of the pagination panel */
 .pagination {
   display: flex;
   justify-content: center;
@@ -9,7 +7,7 @@
   margin-bottom: 20px;
 }
 
-/* Стилі для елементів панелі пагінації */
+/* Styles for pagination panel elements */
 .pagination a {
   display: inline-block;
   padding: 5px 10px;
@@ -21,7 +19,7 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Стилі для номера сторінки, який обрамляється */
+/* Styles for a framed page number */
 .pagination .current {
   display: inline-block;
   padding: 5px 10px;
@@ -32,14 +30,40 @@
   color: #fff;
 }
 
-/* Стилі для ефекту натискання на кнопку */
+/* Styles for the button click effect */
 .pagination a:hover {
   background-color: #007bff;
   color: #fff;
 }
 
-/* Стилі для активної сторінки */
+/* Styles for the active page */
 .pagination .current a {
   background-color: #007bff;
   color: #fff;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  margin-left: 75px;
+}
+
+.article-content {
+  /*max-width: 800px;*/
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.footer {
+  margin-top: auto;
+  height: 100px;
 }

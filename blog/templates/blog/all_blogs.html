@@ -11,7 +11,7 @@
 <h1 id="blogtitle" class="font-weight-bold text-center">Welcome to my BLOG</h1>
 
 {% for blog in page_obj %}
-<div class="row justify-content-center my-3">
+<div class="row justify-content-center my-3" >
   <div class="col-md-10">
     <a href="{% url 'blog:detail' blog.id %}">
       <h2>{{ blog.title }}</h2>
@@ -42,3 +42,4 @@
 
 
 {% endblock %}
+
