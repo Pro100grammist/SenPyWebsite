@@ -11,44 +11,12 @@
     <h1>My "Wall of Weeping"</h1>
     <br>
     <div class="image-gallery">
-        <a href="https://testprovider.com/ru/search-certificate/tp94083226" class="image-item" target="_blank">
-            <img class="image" src="{% static 'portfolio/about/eng.png' %}" alt="Englishdom certificate">
-        </a>
-        <a href="https://certs.prometheus.org.ua/downloads/a6b4413491f444b99604fb1dcea69959/Certificate.pdf" class="image-item" target="_blank">
-            <img class="image" src="{% static 'portfolio/about/git_cert.png' %}" alt="Prometheus certificate Git">
-        </a>
-        <a href="" class="image-item">
-            <img class="image" src="{% static 'portfolio/about/eng2.png' %}" alt="btc certificate it-eng">
-        </a>
-        <a href="https://testprovider.com/ru/search-certificate/tp66859821" class="image-item" target="_blank">
-            <img class="image" src="{% static 'portfolio/about/git_itvdn.png' %}" alt="ITVDN certificate Git Basic">
-        </a>
-        <a href="https://testprovider.com/ru/search-certificate/TP68005796" class="image-item" target="_blank">
-            <img class="image" src="{% static 'portfolio/about/linux_itvdn.png' %}" alt="ITVDN certificate Linux administration basics">
-        </a>
-        <a href="https://testprovider.com/ru/search-certificate/TP61356911" class="image-item" target="_blank">
-            <img class="image" src="{% static 'portfolio/about/html_css_itvdn.png' %}" alt="ITVDN certificate HTML5 CSS3 Starter">
-        </a>
-        <a href="https://testprovider.com/ru/search-certificate/TP17604341" class="image-item" target="_blank">
-            <img class="image" src="{% static 'portfolio/about/java_itvdn.png' %}" alt="ITVDN certificate Java Basic">
-        </a>
-        <a href="https://testprovider.com/ru/search-certificate/TP91289355" class="image-item" target="_blank">
-            <img class="image" src="{% static 'portfolio/about/python_starter_itvdn.jpg' %}" alt="ITVDN certificate Python Starter">
-        </a>
-        <a href="https://testprovider.com/ru/search-certificate/TP48073027" class="image-item" target="_blank">
-            <img class="image" src="{% static 'portfolio/about/python_starter_itvdn.jpg' %}" alt="ITVDN certificate Python Essential">
-        </a>
-        <a href="https://stepik.org/cert/2020775" class="image-item" target="_blank">
-            <img class="image" src="{% static 'portfolio/about/python_indie_course_stepic.jpg' %}" alt="Stepic certificate Python indie course">
-        </a>
-        <a href="https://stepik.org/cert/1803992" class="image-item" target="_blank">
-            <img class="image" src="{% static 'portfolio/about/python_advanced_stepic.jpg' %}" alt="Stepic certificate Python advanced">
-        </a>
-        <a href="https://stepik.org/cert/1695951" class="image-item" target="_blank">
-            <img class="image" src="{% static 'portfolio/about/python_balakirev.jpg' %}" alt="Stepic certificate Python Balakirev">
-        </a>
-        <a href="https://www.efset.org/cert/A9WsJv" class="image-item" target="_blank">
-            <img class="image" src="{% static 'portfolio/about/EF_SET_eng.jpg' %}" alt="EF SET certificate">
-        </a>
+        {% for certificate in certificates %}
+            <a href="{{ certificate.url }}" class="image-item" target="_blank">
+                <img class="image" src="{% static certificate.image %}" alt="{{ certificate.alt }}">
+            </a>
+        {% endfor %}
     </div>
 {% endblock %}
+
+

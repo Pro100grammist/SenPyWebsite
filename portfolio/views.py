@@ -2,15 +2,15 @@ import logging
 from django.shortcuts import render, redirect
 from django.utils.translation import activate, gettext_lazy as _
 from portfolio.models import Projects
-from .content import skills
+from .content import skills, certificates
 
 
 def home(request, language=None):
     if language:
         activate(language)
         request.LANGUAGE_CODE = language
-        logger = logging.getLogger(__name__)  # Отримати інстанцію логгера
-        logger.debug(request.LANGUAGE_CODE)  # Записати повідомлення у лог-файл
+        logger = logging.getLogger(__name__)
+        logger.debug(request.LANGUAGE_CODE)
 
     data = {
         'projects': Projects.objects.all(),
@@ -22,4 +22,4 @@ def home(request, language=None):
 
 
 def about(request):
-    return render(request, 'portfolio/about.html')
+    return render(request, 'portfolio/about.html', {'certificates': certificates})
