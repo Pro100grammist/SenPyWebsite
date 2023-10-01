@@ -1,115 +1,113 @@
-<!Doctype html>
+<!DOCTYPE html>
 {% load static %}
 {% load i18n %}
 <html lang="{{ request.LANGUAGE_CODE }}">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
 
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{% static 'portfolio/style.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-    <!-- custom CSS -->
-    <link rel="stylesheet" href="{% static 'portfolio/style.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <!-- Logotype -->
+        <link rel="icon" type="image/png" href="{% static 'portfolio/logo.png' %}">
 
-    <!-- logotype -->
-    <link rel="icon" type="image/png" href="{% static 'portfolio/logo.png' %}">
+        <!-- Inline CSS -->
+        <style>
+            html, body {
+                overflow-x: hidden;
+            }
+        </style>
 
-    <style>
-    html, body {
-      overflow-x: hidden;
-    }
+        {% block extra_styles %}
+        {% endblock %}
 
-    </style>
+        <title>Senpy</title>
+    </head>
 
-    {% block extra_styles %}
-    {% endblock %}
+    <body>
+        <nav id="topNav" class="navbar navbar-expand-md navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="{% url 'homepage' %}">
+                    <img src="{% static 'portfolio/logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="SenPy Logo">
+                    <span>SenPy Interactive</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse text-center" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'about' %}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% static 'portfolio/cv.pdf' %}" target="_blank">Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.linkedin.com/in/pro100grammer/" target="_blank">LinkedIn</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.facebook.com/Pro100grmmer/" target="_blank">Facebook</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'blog:all_blogs' %}">Blog</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex search-field">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-info" type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="language-switcher">
+                    <a href="?language=en" class="language-option">English</a>
+                    <a href="?language=uk" class="language-option">Українська</a>
+                </div>
+            </div>
+        </nav>
 
-    <title>Senpy</title>
-  </head>
+        {% block content %}
+        {% endblock %}
 
-  <body>
-    <nav id="topNav" class="navbar navbar-expand-md navbar-light">
-      <div class="container">
-        <a class="navbar-brand" href="{% url 'homepage' %}">
-          <img src="{% static 'portfolio/logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="SenPy Logo">
-          <span>SenPy Interactive</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse text-center" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'about' %}">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% static 'portfolio/cv.pdf' %}" target="_blank">Resume</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://www.linkedin.com/in/pro100grammer/" target="_blank">LinkedIn</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://www.facebook.com/Pro100grmmer/" target="_blank">Facebook</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'blog:all_blogs' %}">Blog</a>
-            </li>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; 2023 SenPy Interactive. All rights reserved.</p>
+                        <p>Developed and contributed by Pro100grammer [Oleh Sencha].</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Contacts: senpy@gmail.com | @Pro100grammer</p>
+                        <p>Follow us:
+                            <a href="https://www.linkedin.com/in/pro100grammer/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
+                            <a href="https://www.facebook.com/Pro100grmmer/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a> |
+                            <a href="https://github.com/Pro100grammist" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
-          </ul>
-          <form class="d-flex search-field">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-info" type="submit">Search</button>
-          </form>
-        </div>
-        <div class="language-switcher">
-          <a href="?language=en" class="language-option">English</a>
-          <a href="?language=uk" class="language-option">Українська</a>
-        </div>
-      </div>
-    </nav>
+        <!-- Optional JavaScript; choose one of the two! -->
 
-    {% block content %}
-    {% endblock %}
+        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+        <!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
+        <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>-->
 
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <p>&copy; 2023 SenPy Interactive. All rights reserved.</p>
-            <p>Developed and contributed by Pro100grammer [Oleh Sencha].</p>
-          </div>
-          <div class="col-md-6">
-            <p>Contacts: senpy@gmail.com | @Pro100grammer</p>
-            <p>Follow us:
-              <a href="https://www.linkedin.com/in/pro100grammer/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
-              <a href="https://www.facebook.com/Pro100grmmer/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a> |
-              <a href="https://github.com/Pro100grammist" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
 
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
 
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
-    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>-->
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-    
-    {% block extra_scrits %}
-    {% endblock %}
-  </body>
+        {% block extra_scrits %}
+        {% endblock %}
+    </body>
 </html>

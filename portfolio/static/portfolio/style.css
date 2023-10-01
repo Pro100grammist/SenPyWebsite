@@ -1,9 +1,8 @@
-/* Загальні стилі */
 body {
   font-family: 'Lato', sans-serif;
 }
 
-/* Навігаційне меню */
+/* Navigation menu */
 .navbar-nav .nav-link {
   color: rgba(0, 0, 0, 1);
 }
@@ -12,7 +11,7 @@ body {
   color: rgba(0, 0, 0, 0.5);
 }
 
-/* Стилізація кнопок */
+/* Button styling */
 .btn-primary {
   background-color: #007bff;
   color: #fff;
@@ -20,7 +19,7 @@ body {
   font-size: 24px;
 }
 
-/* Випадаюче меню */
+/* Drop-down menu */
 .dropdown-menu {
   transform-origin: top;
   transform: scaleY(0);
@@ -35,14 +34,14 @@ body {
 }
 
 .dropdown-menu-right {
-  text-align: right; /* Вирівнювання тексту вправо */
+  text-align: right;
 }
 
 .dropdown:hover .dropdown-menu {
   transform: scaleY(1);
 }
 
-/* Загальні стилі для списку навичок */
+/* ЗCommon styles for a skills menu */
 .skills-list {
   list-style: none;
   padding: 0;
@@ -100,43 +99,43 @@ body {
 }
 
 
-/* Загальні стилі для зображень */
+/* Common styles for images */
 .img-fluid {
   max-width: 100%;
   height: auto;
 }
 
-/* Загальні стилі для рядків та відступів */
+/* Common styles for lines and indents */
 .row,
 .mt-3 {
   margin-left: 20px;
   margin-right: 20px;
 }
 
-/* Відступи для меню "Hard Skills" і "Soft Skills" */
+/* "Hard Skills" і "Soft Skills" */
 .col-3 {
   display: flex;
-  justify-content: flex-end; /* Вирівнювання вправо (справа від фото) */
-  align-items: flex-start; /* Вирівнювання вгору (верхній край фото) */
+  justify-content: flex-end; /* Alignment to the right (to the right of the photo) */
+  align-items: flex-start; /*  Upward alignment (top edge of the photo) */
 }
 
-/* Відступ для фотографії */
+/* Indentation for photography */
 .col-6 {
-  text-align: center; /* Центруємо фотографію по горизонталі */
+  text-align: center; /* Center the photo horizontally */
 }
 
-/* Відступ для меню "Soft Skills" */
+/* "Soft Skills" */
 .col-3.text-right {
   display: flex;
-  justify-content: flex-start; /* Вирівнювання вліво (ліворуч від фото) */
-  align-items: flex-start; /* Вирівнювання вгору (верхній край фото) */
+  justify-content: flex-start; /* Left alignment (to the left of the photo) */
+  align-items: flex-start; /* Upward alignment (top edge of the photo) */
 }
 
 #clickSound {
-  display: none; /* Приховати аудіоелемент */
+  display: none; /* Hide audio element */
 }
 
-/* Стилізація перемикача мови */
+/* language switcher */
 .language-switcher {
   display: flex;
   gap: 10px;
@@ -156,7 +155,7 @@ body {
   color: #fff;
 }
 
-/* Стилізація футера */
+/* footer */
 .footer {
   background-color: #333;
   padding: 10px;
@@ -166,7 +165,7 @@ body {
   height: 100px;
 }
 
-/* Медіа-запити */
+/* Media requests */
 @media (min-width: 992px) {
   #hometext {
     font-size: 4rem;

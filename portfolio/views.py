@@ -6,9 +6,16 @@ from .content import skills, certificates
 
 
 def home(request, language=None):
+    """
+    The main view for the home page.
+    :param request: The Django request.
+    :param language: The selected language code.
+    """
     if language:
         activate(language)
         request.LANGUAGE_CODE = language
+
+        # Initializing the logger for debugging
         logger = logging.getLogger(__name__)
         logger.debug(request.LANGUAGE_CODE)
 
@@ -22,4 +29,7 @@ def home(request, language=None):
 
 
 def about(request):
+    """
+    The view for the "About" page.
+    """
     return render(request, 'portfolio/about.html', {'certificates': certificates})
