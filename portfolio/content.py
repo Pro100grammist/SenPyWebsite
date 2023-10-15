@@ -1,23 +1,33 @@
-skills = {
+content = {
     'hard_skills':
         [
-            {'title': 'Python', 'url_name': 'python'},
-            {'title': 'Django', 'url_name': 'django'},
-            {'title': 'SQL', 'url_name': 'sql'},
-            {'title': 'MySql', 'url_name': 'mysql'},
-            {'title': 'HTML5 & CSS3', 'url_name': 'htmlcss'},
-            {'title': 'Git', 'url_name': 'git'},
-            {'title': 'Docker', 'url_name': 'docker'}
+            {'title': 'Python', 'url_name': 'python', 'link': 'https://www.python.org/'},
+            {'title': 'Django', 'url_name': 'django', 'link': 'https://www.djangoproject.com/'},
+            {'title': 'Databases', 'url_name': 'db', 'link': 'https://www.djangoproject.com/'},
+            {'title': 'ORM', 'url_name': 'orm', 'link': '#'},
+            {'title': 'Web Frameworks', 'url_name': 'webframework', 'link': '#'},
+            {'title': 'Web Servers', 'url_name': 'webserver', 'link': '#'},
+            {'title': 'HTML5 & CSS3', 'url_name': 'htmlcss', 'link': '#'},
+            {'title': 'Git', 'url_name': 'git', 'link': 'https://git-scm.com/'},
+            {'title': 'Docker', 'url_name': 'docker', 'link': 'https://www.docker.com/'}
         ],
-    'soft_skills':
+    'necessary_useful':
         [
-            {'title': 'Communication', 'url_name': 'communication'},
-            {'title': 'Collaboration', 'url_name': 'collaboration'},
-            {'title': 'Problem solving', 'url_name': 'solving'},
-            {'title': 'Teamwork', 'url_name': 'team'},
-            {'title': 'Time management', 'url_name': 'time'},
-            {'title': 'Responsibility', 'url_name': 'responsibility'}
+            {'title': 'OS', 'url_name': 'ide'},
+            {'title': 'IDE', 'url_name': 'ide'},
+            {'title': 'Problem solving', 'url_name': 'ide'},
+            {'title': 'WakaTime', 'url_name': 'ide'},
+            {'title': '', 'url_name': 'ide'},
+            {'title': 'Responsibility', 'url_name': 'ide'}
 
+        ],
+    'ides':
+        [
+            {'name': 'PyCharm', 'image': 'portfolio/dropmenu/ides/pycharm.png', 'url': 'https://www.jetbrains.com/pycharm/', 'rating': ['5', ' 5/5'], 'description': 'PyCharm is a cross-platform integrated development environment for the Python programming language. This IDE has a large set of tools for easy development in Python and its frameworks.'},
+            {'name': 'Visual Studio Code', 'image': 'portfolio/dropmenu/ides/vc-code.png', 'url': 'https://code.visualstudio.com/', 'rating': ['4', ' 4.5/5'], 'description': 'Visual Studio Code is Microsoft\'s source code editor for Windows, Linux and macOS. It is a relatively "light" code editor for cross-platform web development.'},
+            {'name': 'Sublime Text', 'image': 'portfolio/dropmenu/ides/sublime.png', 'url': 'https://www.sublimetext.com/', 'rating': ['4', ' 4.3/5'], 'description': 'Sublime Text is a cross-platform text editor for writing software code in various programming languages. It supports plug-ins in Python programming language.'},
+            {'name': 'Spyder', 'image': 'portfolio/dropmenu/ides/spyder.png', 'url': 'https://www.spyder-ide.org/', 'rating': ['4', ' 4/5'], 'description': 'Spyder is a cross-platform interactive open source IDE. Very well suited for complex Python calculations, as out of the box it has advanced analysis, debugging, editing and profiling capabilities with data exploration.'},
+            {'name': 'Emacs', 'image': 'portfolio/dropmenu/ides/emacs.jpg', 'url': 'https://www.gnu.org/software/emacs/download.html', 'rating': ['4', ' 4/5'], 'description': 'Emacs is one of the most popular text editors among developers and other technical professionals because of its extensibility and ability to perform a wide range of tasks, including editing text, writing code, organizing files, and navigating the Internet. Emacs is the favorite text editor of Guido van Rossum (the creator of Python).'}
         ]
 
 }
@@ -87,6 +97,21 @@ certificates = [
         'url': 'https://testprovider.com/ru/search-certificate/TP65257902',
         'image': 'portfolio/about/docker_itvdn.jpg',
         'alt': 'ITVDN certificate Docker',
+    },
+    {
+        'url': 'https://testprovider.com/ru/search-certificate/TP44626085',
+        'image': 'portfolio/about/my_sql_itvdn.jpg',
+        'alt': 'ITVDN certificate MySql',
+    },
+    {
+        'url': 'https://testprovider.com/ru/search-certificate/TP71870425',
+        'image': 'portfolio/about/postgre_sql_itvdn.jpg',
+        'alt': 'ITVDN certificate PostgreSQL',
+    },
+    {
+        'url': 'https://testprovider.com/ru/search-certificate/TP05924985',
+        'image': 'portfolio/about/django_starter_itvdn.jpg',
+        'alt': 'ITVDN certificate Django starter',
     },
     {
         'url': 'https://stepik.org/cert/2020775',

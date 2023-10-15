@@ -2,7 +2,7 @@ import logging
 from django.shortcuts import render, redirect
 from django.utils.translation import activate, gettext_lazy as _
 from portfolio.models import Projects
-from .content import skills, certificates
+from .content import content, certificates
 
 
 def home(request, language=None):
@@ -21,8 +21,8 @@ def home(request, language=None):
 
     data = {
         'projects': Projects.objects.all(),
-        'hard_skills': skills['hard_skills'],
-        'soft_skills': skills['soft_skills']
+        'hard_skills': content['hard_skills'],
+        'necessary_useful': content['necessary_useful'],
     }
 
     return render(request, 'portfolio/homepage.html', context=data)
@@ -33,3 +33,7 @@ def about(request):
     The view for the "About" page.
     """
     return render(request, 'portfolio/about.html', {'certificates': certificates})
+
+
+def ide(request):
+    return render(request, 'portfolio/ide.html', {'ides': content['ides']})

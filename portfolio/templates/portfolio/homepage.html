@@ -8,12 +8,12 @@
             <!-- Dropdown for Hard Skills -->
             <div class="dropdown">
                 <button class="btn btn-primary dropdown-toggle" type="button" id="hardSkillsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Hard Skills
+                    Full Stack Python
                 </button>
                 <div class="dropdown-menu animated" aria-labelledby="hardSkillsDropdown">
                     <ul class="skills-list">
                         {% for skill in hard_skills %}
-                            <li class="animate"><a href="#"><span class="hard-skills-text"><span>{{ skill.title }}</span></span></a></li>
+                            <li class="animate"><a href="{{ skill.link }}" target="_blank"><span class="hard-skills-text"><span>{{ skill.title }}</span></span></a></li>
                         {% endfor %}
                     </ul>
                 </div>
@@ -27,15 +27,15 @@
         </div>
 
         <div class="col-3 text-right">
-            <!-- Dropdown for Soft Skills -->
+            <!-- Dropdown for Necessary & Useful -->
             <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" id="softSkillsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Soft Skills
+                <button class="btn btn-primary dropdown-toggle" type="button" id="NUDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Necessary & Useful
                 </button>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="softSkillsDropdown">
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="NUDropdown">
                     <ul class="skills-list">
-                        {% for skill in soft_skills %}
-                            <li><a href="#"><span class="soft-skills-text"><span>{{ skill.title }}</span></span></a></li>
+                        {% for item in necessary_useful %}
+                            <li><a href="{% url item.url_name %}"><span class="soft-skills-text"><span>{{ item.title }}</span></span></a></li>
                         {% endfor %}
                     </ul>
                 </div>

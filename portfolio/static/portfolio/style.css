@@ -165,6 +165,20 @@ body {
   height: 100px;
 }
 
+/* fixed bottom footer*/
+/*.footer {
+  background-color: #333;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  z-index: 999;
+}*/
+
 /* Media requests */
 @media (min-width: 992px) {
   #hometext {

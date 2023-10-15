@@ -31,3 +31,45 @@
 h1 {
     text-align: center;
 }
+
+/* subpages css styles */
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
+.rating > span {
+    display: inline-block;
+    position: relative;
+    width: 1.1em;
+}
+
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+    content: "\2605";
+    position: absolute;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.product img {
+    max-width: 180px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.product .description {
+    flex: 1;
+}
+
+.left-half {
+    flex: 30%;
+}
+
+.right-half {
+    flex: 70%;
+}
