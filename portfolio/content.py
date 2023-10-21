@@ -2,23 +2,23 @@ content = {
     'hard_skills':
         [
             {'title': 'Python', 'url_name': 'python', 'link': 'https://www.python.org/'},
-            {'title': 'Django', 'url_name': 'django', 'link': 'https://www.djangoproject.com/'},
+            {'title': 'Web Frameworks', 'url_name': 'web_frameworks', 'link': 'web_frameworks'},
             {'title': 'Databases', 'url_name': 'db', 'link': 'https://www.djangoproject.com/'},
             {'title': 'ORM', 'url_name': 'orm', 'link': '#'},
-            {'title': 'Web Frameworks', 'url_name': 'webframework', 'link': '#'},
             {'title': 'Web Servers', 'url_name': 'webserver', 'link': '#'},
             {'title': 'HTML5 & CSS3', 'url_name': 'htmlcss', 'link': '#'},
+            {'title': 'JS', 'url_name': 'js', 'link': '#'},
             {'title': 'Git', 'url_name': 'git', 'link': 'https://git-scm.com/'},
             {'title': 'Docker', 'url_name': 'docker', 'link': 'https://www.docker.com/'}
         ],
     'necessary_useful':
         [
-            {'title': 'OS', 'url_name': 'ide'},
             {'title': 'IDE & Text redactors', 'url_name': 'ide'},
-            {'title': 'Problem solving', 'url_name': 'ide'},
-            {'title': 'WakaTime', 'url_name': 'ide'},
-            {'title': '', 'url_name': 'ide'},
-            {'title': 'Responsibility', 'url_name': 'ide'}
+            {'title': 'Virtual Box', 'url_name': 'https://www.virtualbox.org/'},
+            {'title': 'Ubuntu Linux', 'url_name': 'https://ubuntu.com/'},
+            {'title': 'WakaTime', 'url_name': 'https://wakatime.com/'},
+            {'title': 'GitHub', 'url_name': 'https://github.com/'},
+            {'title': 'Platforms for online learning', 'url_name': 'ide'}
 
         ],
     'ides':
@@ -28,6 +28,16 @@ content = {
             {'name': 'Sublime Text', 'image': 'portfolio/dropmenu/ides/sublime.png', 'url': 'https://www.sublimetext.com/', 'rating': ['4', ' 4.3/5'], 'description': 'Sublime Text is a cross-platform text editor for writing software code in various programming languages. It supports plug-ins in Python programming language.'},
             {'name': 'Spyder', 'image': 'portfolio/dropmenu/ides/spyder.png', 'url': 'https://www.spyder-ide.org/', 'rating': ['4', ' 4/5'], 'description': 'Spyder is a cross-platform interactive open source IDE. Very well suited for complex Python calculations, as out of the box it has advanced analysis, debugging, editing and profiling capabilities with data exploration.'},
             {'name': 'Emacs', 'image': 'portfolio/dropmenu/ides/emacs.jpg', 'url': 'https://www.gnu.org/software/emacs/download.html', 'rating': ['4', ' 4/5'], 'description': 'Emacs is one of the most popular text editors among developers and other technical professionals because of its extensibility and ability to perform a wide range of tasks, including editing text, writing code, organizing files, and navigating the Internet. Emacs is the favorite text editor of Guido van Rossum (the creator of Python).'}
+        ],
+    'web_frameworks':
+        [
+            {'name': 'Django', 'image': 'portfolio/dropmenu/web/django.png', 'url': 'https://www.djangoproject.com/', 'rating': ['9', ' 9/10'], 'description': 'Django is a free and open source web development framework for the Python programming language. It provides a set of tools and libraries for building web applications, facilitating development, database management, URL handling, authentication and more. Django follows DRY (Don\'t Repeat Yourself) principles and provides high performance and security. This framework is often used to build websites, social networks, e-commerce shops and other web applications.'},
+            {'name': 'Flask', 'image': 'portfolio/dropmenu/web/flask.png', 'url': 'https://flask.palletsprojects.com/en/3.0.x/', 'rating': ['6', ' 6/10'], 'description': 'Flask is a minimalistic framework for Python web development. It provides a basic set of tools for building web applications, allowing developers to organise their code in a flexible way. Flask is easy to use and very flexible. In other words, developers can extend the functionality of Flask by adding third-party libraries and plugins as needed.'},
+            {'name': 'FastAPI', 'image': 'portfolio/dropmenu/web/fastapi.png', 'url': 'https://fastapi.tiangolo.com/', 'rating': ['8', ' 8/10'], 'description': 'FastAPI is a modern and fast framework for building Python web applications and APIs that supports asynchronous programming and automatic documentation generation. It allows you to quickly create web services and APIs while ensuring security and reliability.'},
+            {'name': 'Pyramid', 'image': 'portfolio/dropmenu/web/pyramid.png', 'url': 'https://trypyramid.com/', 'rating': ['6', ' 6/10'], 'description': 'Pyramid is a web development framework in the Python programming language that provides maximum flexibility and freedom to the developer. It provides basic tools and allows developers to select components and libraries as they see fit, making it suitable for developing a variety of web applications, from small websites to large systems.'},
+            {'name': 'Tornado', 'image': 'portfolio/dropmenu/web/tornado.png', 'url': 'https://www.tornadoweb.org/en/stable/', 'rating': ['7', ' 7/10'], 'description': 'Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed. By using non-blocking network I/O, Tornado can scale to tens of thousands of open connections, making it ideal for long polling, WebSockets, and other applications that require a long-lived connection to each user.'},
+
+
         ]
 
 }

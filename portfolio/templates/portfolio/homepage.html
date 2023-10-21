@@ -35,7 +35,7 @@
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="NUDropdown">
                     <ul class="skills-list">
                         {% for item in necessary_useful %}
-                            <li><a href="{% url item.url_name %}"><span class="soft-skills-text"><span>{{ item.title }}</span></span></a></li>
+                            <li><a href="{{ item.url_name }}"><span class="soft-skills-text"><span>{{ item.title }}</span></span></a></li>
                         {% endfor %}
                     </ul>
                 </div>

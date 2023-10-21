@@ -37,3 +37,7 @@ def about(request):
 
 def ide(request):
     return render(request, 'portfolio/ide.html', {'ides': content['ides']})
+
+
+def web(request):
+    return render(request, 'portfolio/web_frameworks.html', {'web_frameworks': content['web_frameworks']})

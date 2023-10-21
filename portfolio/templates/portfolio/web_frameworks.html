@@ -1,0 +1,28 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% load custom_tags %}
+
+{% block extra_styles %}
+    <link rel="stylesheet" href="{% static 'portfolio/style2.css' %}">
+{% endblock %}
+
+{% block content %}
+{% for wf in web_frameworks%}
+<div class="product">
+    <div class="left-half">
+        <a href="{{ wf.url }}" target="_blank">
+            <img src="{% static wf.image %}" alt="{{ wf.name }}">
+        </a>
+    </div>
+    <div class="right-half">
+        <p>{{ wf.description }}</p>
+        <div class="rating">
+            <p>My rating is {{ wf.rating.1 }}</p>
+            {% for _ in wf.rating.0|generate_stars %}
+                <span>★</span>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

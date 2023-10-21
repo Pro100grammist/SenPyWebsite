@@ -98,6 +98,14 @@ body {
   animation-delay: 2.8s;
 }
 
+.skills-list li:nth-child(8) {
+  animation-delay: 3.1s;
+}
+
+.skills-list li:nth-child(9) {
+  animation-delay: 3.4s;
+}
+
 
 /* Common styles for images */
 .img-fluid {
