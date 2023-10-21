@@ -14,7 +14,7 @@ content = {
     'necessary_useful':
         [
             {'title': 'OS', 'url_name': 'ide'},
-            {'title': 'IDE', 'url_name': 'ide'},
+            {'title': 'IDE & Text redactors', 'url_name': 'ide'},
             {'title': 'Problem solving', 'url_name': 'ide'},
             {'title': 'WakaTime', 'url_name': 'ide'},
             {'title': '', 'url_name': 'ide'},
