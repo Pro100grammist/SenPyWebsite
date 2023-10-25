@@ -25,8 +25,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls'), name='blog'),
     path('about/', views.about, name='about'),
-    path('ide/', views.ide, name='ide'),
-    path('web_frameworks/', views.web, name='web_frameworks'),
+    path('<str:content_key>/', views.sub_page, name='ide'),
+    path('<str:content_key>/', views.sub_page, name='web_frameworks'),
+    path('<str:content_key>/', views.sub_page, name='data'),
     path('<str:language>/', views.home, name='home_with_language'),
 
 ]

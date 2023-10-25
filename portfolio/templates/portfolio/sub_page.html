@@ -7,18 +7,18 @@
 {% endblock %}
 
 {% block content %}
-{% for wf in web_frameworks%}
+{% for item in items %}
 <div class="product">
     <div class="left-half">
-        <a href="{{ wf.url }}" target="_blank">
-            <img src="{% static wf.image %}" alt="{{ wf.name }}">
+        <a href="{{ item.url }}" target="_blank">
+            <img src="{% static item.image %}" alt="{{ item.name }}">
         </a>
     </div>
     <div class="right-half">
-        <p>{{ wf.description }}</p>
+        <p>{{ item.description }}</p>
         <div class="rating">
-            <p>My rating is {{ wf.rating.1 }}</p>
-            {% for _ in wf.rating.0|generate_stars %}
+            <p>My rating is {{ item.rating.1 }}</p>
+            {% for _ in item.rating.0|generate_stars %}
                 <span>★</span>
             {% endfor %}
         </div>
