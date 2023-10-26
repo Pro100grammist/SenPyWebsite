@@ -12,8 +12,8 @@
                 </button>
                 <div class="dropdown-menu animated" aria-labelledby="hardSkillsDropdown">
                     <ul class="skills-list">
-                        {% for skill in hard_skills %}
-                            <li class="animate"><a href="{{ skill.link }}" target="_blank"><span class="hard-skills-text"><span>{{ skill.title }}</span></span></a></li>
+                        {% for skill in hard_skills.all %}
+                            <li class="animate"><a href="{{ skill.link }}"><span class="hard-skills-text"><span>{{ skill.title }}</span></span></a></li>
                         {% endfor %}
                     </ul>
                 </div>
@@ -34,7 +34,7 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="NUDropdown">
                     <ul class="skills-list">
-                        {% for item in necessary_useful %}
+                        {% for item in necessary_useful.all %}
                             <li><a href="{{ item.url_name }}"><span class="soft-skills-text"><span>{{ item.title }}</span></span></a></li>
                         {% endfor %}
                     </ul>

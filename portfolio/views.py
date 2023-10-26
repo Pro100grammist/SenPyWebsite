@@ -1,7 +1,7 @@
 import logging
 from django.shortcuts import render, redirect
 from django.utils.translation import activate, gettext_lazy as _
-from portfolio.models import Projects
+from portfolio.models import *
 from .content import content
 
 
@@ -21,8 +21,8 @@ def home(request, language=None):
 
     data_mp = {
         'projects': Projects.objects.all(),
-        'hard_skills': content['hard_skills'],
-        'necessary_useful': content['necessary_useful'],
+        'hard_skills': HardSkill.objects.all(),
+        'necessary_useful': NecessaryUseful.objects.all(),
     }
 
     return render(request, 'portfolio/homepage.html', context=data_mp)
@@ -32,7 +32,8 @@ def about(request):
     """
     The view for the "About" page.
     """
-    return render(request, 'portfolio/about.html', {'certificates': content['certificates']})
+    certificates = Certificates.objects.all()
+    return render(request, 'portfolio/about.html', {'certificates': certificates})
 
 
 def sub_page(request, content_key):
@@ -41,6 +42,17 @@ def sub_page(request, content_key):
     :param request: The Django request.
     :param content_key: Key for content data.
     """
-    return render(request, 'portfolio/sub_page.html', {'items': content.get(content_key, [])})
+    model_mapping = {
+        'ide': IDE,
+        'web_frameworks': WebFrameworks,
+        'data': Data,
+    }
 
+    model = model_mapping.get(content_key)
 
+    if model is None:
+        items = []
+    else:
+        items = model.objects.all()
+
+    return render(request, 'portfolio/sub_page.html', {'items': items})

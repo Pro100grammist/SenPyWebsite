@@ -129,6 +129,11 @@ content = {
                 'alt': 'ITVDN certificate Django starter',
             },
             {
+                'url': 'https://testprovider.com/ru/search-certificate/TP73121252',
+                'image': 'portfolio/about/django_essential_itvdn.jpg',
+                'alt': 'ITVDN certificate Django Essential',
+            },
+            {
                 'url': 'https://stepik.org/cert/2020775',
                 'image': 'portfolio/about/python_indie_course_stepic.jpg',
                 'alt': 'Stepic certificate Python indie course',
@@ -150,5 +155,3 @@ content = {
             },
         ]
 }
-
-
