@@ -28,6 +28,11 @@ urlpatterns = [
     path('<str:content_key>/', views.sub_page, name='ide'),
     path('<str:content_key>/', views.sub_page, name='web_frameworks'),
     path('<str:content_key>/', views.sub_page, name='data'),
+    path('<str:content_key>/', views.sub_page, name='webserver'),
+    path('<str:content_key>/', views.sub_page, name='frontend'),
+    path('<str:content_key>/', views.sub_page, name='git_serv'),
+    path('<str:content_key>/', views.sub_page, name='paas'),
+    path('<str:content_key>/', views.sub_page, name='online_learning'),
     path('<str:language>/', views.home, name='home_with_language'),
 
 ]

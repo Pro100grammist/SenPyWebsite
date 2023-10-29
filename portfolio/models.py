@@ -62,6 +62,50 @@ class Data(models.Model):
         return self.name
 
 
+class WebServers(models.Model):
+    name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='portfolio/dropmenu/server/')
+    url = models.URLField()
+    rating = models.CharField(max_length=20)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+
+class FrontEnd(models.Model):
+    name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='portfolio/dropmenu/frontend/')
+    url = models.URLField()
+    rating = models.CharField(max_length=20)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+
+class GitServices(models.Model):
+    name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='portfolio/dropmenu/git_serv/')
+    url = models.URLField()
+    rating = models.CharField(max_length=20)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+
+class PaaS(models.Model):
+    name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='portfolio/dropmenu/paas/')
+    url = models.URLField()
+    rating = models.CharField(max_length=20)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+
 class Certificates(models.Model):
     url = models.URLField()
     image = models.ImageField(upload_to='portfolio/about/')
