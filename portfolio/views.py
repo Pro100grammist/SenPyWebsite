@@ -13,13 +13,13 @@ def home(request, language=None):
         logger = logging.getLogger(__name__)
         logger.debug(request.LANGUAGE_CODE)
 
-    data_mp = {
+    data_mapping = {
         'projects': Projects.objects.all(),
         'hard_skills': HardSkill.objects.all(),
         'necessary_useful': NecessaryUseful.objects.all(),
     }
 
-    return render(request, 'portfolio/homepage.html', context=data_mp)
+    return render(request, 'portfolio/homepage.html', context=data_mapping)
 
 
 def about(request):
@@ -35,7 +35,9 @@ def sub_page(request, content_key):
         'web_frameworks': WebFrameworks,
         'data': Data,
         'webserver': WebServers,
-        'frontend': FrontEnd
+        'frontend': FrontEnd,
+        'paas': PaaS,
+        'git_serv': GitServices
     }
 
     model = model_mapping.get(content_key)
