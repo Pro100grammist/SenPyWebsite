@@ -32,7 +32,8 @@ urlpatterns = [
     path('<str:content_key>/', views.sub_page, name='frontend'),
     path('<str:content_key>/', views.sub_page, name='git_serv'),
     path('<str:content_key>/', views.sub_page, name='paas'),
-    path('<str:content_key>/', views.sub_page, name='online_learning'),
+    path('<str:content_key>/', views.sub_page, name='education'),
+    path('<str:content_key>/', views.sub_page, name='coding_simulator'),
     path('<str:language>/', views.home, name='home_with_language'),
 
 ]

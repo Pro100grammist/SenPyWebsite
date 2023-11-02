@@ -106,6 +106,39 @@ class PaaS(models.Model):
         return self.name
 
 
+class LearningPlatform(models.Model):
+    name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='portfolio/dropmenu/platform/')
+    url = models.URLField()
+    rating = models.CharField(max_length=20)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+
+class Education(models.Model):
+    name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='portfolio/dropmenu/education/')
+    url = models.URLField()
+    rating = models.CharField(max_length=20)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+
+class CodingSimulator(models.Model):
+    name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='portfolio/dropmenu/cs/')
+    url = models.URLField()
+    rating = models.CharField(max_length=20)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+
 class Certificates(models.Model):
     url = models.URLField()
     image = models.ImageField(upload_to='portfolio/about/')

@@ -37,7 +37,9 @@ def sub_page(request, content_key):
         'webserver': WebServers,
         'frontend': FrontEnd,
         'paas': PaaS,
-        'git_serv': GitServices
+        'git_serv': GitServices,
+        'education': Education,
+        'coding_simulator': CodingSimulator,
     }
 
     model = model_mapping.get(content_key)
