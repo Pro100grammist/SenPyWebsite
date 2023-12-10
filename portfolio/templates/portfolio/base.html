@@ -1,98 +1,165 @@
 <!DOCTYPE html>
-{% load static %}
-{% load i18n %}
+{% load static %} {% load i18n %}
 <html lang="{{ request.LANGUAGE_CODE }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="{% block meta_description %}{% endblock %}">
-    <meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="dark light" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="{% block meta_description %}{% endblock %}"
+    />
+    <meta name="keywords" content="{% block meta_keywords %}{% endblock %}" />
 
-    <link rel="icon" type="image/png" href="{% static 'portfolio/logo.png' %}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap">
-    <link rel="stylesheet" href="{% static 'portfolio/style.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="preload" href="{% static 'portfolio/logo.png' %}" as="image">
+    <link
+      rel="icon"
+      type="image/png"
+      href="{% static 'portfolio/logo.png' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'portfolio/style.css' %}" />
+    <link rel="preload" href="{% static 'portfolio/logo.png' %}" as="image" />
 
     <style>
-        html, body {
-            overflow-x: hidden;
-        }
+      html,
+      body {
+        overflow-x: hidden;
+      }
     </style>
 
-    {% block extra_styles %}
-    {% endblock %}
+    {% block extra_styles %} {% endblock %}
 
     <title>{% block title %}Senpy{% endblock %}</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav id="topNav" class="navbar navbar-expand-md navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="{% url 'homepage' %}">
-                <img src="{% static 'portfolio/logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="SenPy Logo">
-                <span>SenPy Interactive</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse text-center" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'about' %}">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% static 'portfolio/cv.pdf' %}" target="_blank">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.linkedin.com/in/pro100grammer/" target="_blank">LinkedIn</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.facebook.com/Pro100grmmer/" target="_blank">Facebook</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'blog:all_blogs' %}">Blog</a>
-                    </li>
-                </ul>
-                <form class="d-flex search-field">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-info" type="submit">Search</button>
-                </form>
-            </div>
-            <div class="language-switcher">
-                <a href="?language=en" class="language-option">English</a>
-                <a href="?language=uk" class="language-option">Українська</a>
-            </div>
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'homepage' %}">
+          <img
+            src="{% static 'portfolio/logo.png' %}"
+            width="30"
+            height="30"
+            class="d-inline-block align-top"
+            alt="SenPy Logo"
+          />
+          <span class="logo-text">SenPy Interactive</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-center" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'about' %}">About me</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{% static 'portfolio/cv.pdf' %}"
+                target="_blank"
+                >Resume</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://www.linkedin.com/in/pro100grammer/"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://www.facebook.com/Pro100grmmer/"
+                target="_blank"
+                >Facebook</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/Pro100grammist"
+                >GitHub</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href=" https://wakatime.com/@Pro100grammist"
+                >WakaTime</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'blog:all_blogs' %}">Blog</a>
+            </li>
+          </ul>
         </div>
+        <div class="language-switcher">
+          <a href="?language=en" class="language-option">English</a>
+          <a href="?language=uk" class="language-option">Українська</a>
+        </div>
+        <div>
+          <button class="btn btn-theme-swithcer" type="button">Theme</button>
+        </div>
+      </div>
     </nav>
 
-    {% block content %}
-    {% endblock %}
+    {% block content %} {% endblock %}
 
     <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p>&copy; {% now "Y" %} SenPy Interactive. All rights reserved.</p>
-                    <p>Developed by Pro100grammer [Oleh Sencha].</p>
-                </div>
-                <div class="col-md-6">
-                    <p>Contacts: senpy@gmail.com | @Pro100grammer</p>
-                    <p>Follow us:
-                        <a href="https://www.linkedin.com/in/pro100grammer/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
-                        <a href="https://www.facebook.com/Pro100grmmer/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a> |
-                        <a href="https://github.com/Pro100grammist" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                    </p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p>&copy; {% now "Y" %} SenPy Interactive. All rights reserved.</p>
+            <p>Developed by Pro100grammer [Oleh Sencha].</p>
+          </div>
+          <div class="col-md-6">
+            <p>Contacts: senpy@gmail.com | @Pro100grammer</p>
+            <p>
+              Follow us:
+              <a
+                href="https://www.linkedin.com/in/pro100grammer/"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i> LinkedIn</a
+              >
+              |
+              <a href="https://www.facebook.com/Pro100grmmer/" target="_blank"
+                ><i class="fab fa-facebook"></i> Facebook</a
+              >
+              |
+              <a href="https://github.com/Pro100grammist" target="_blank"
+                ><i class="fab fa-github"></i> GitHub</a
+              >
+            </p>
+          </div>
         </div>
+      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+    <script src="{% static 'portfolio/js/base.js'%}" type="module"></script>
 
-    {% block extra_scripts %}
-    {% endblock %}
-</body>
+    {% block extra_scripts %} {% endblock %}
+  </body>
 </html>
