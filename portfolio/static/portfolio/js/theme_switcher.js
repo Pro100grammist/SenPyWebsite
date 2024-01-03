@@ -17,7 +17,7 @@ export class ThemeToggle {
     
     #getInitThemeValue = () => {
         const preSetteledThemeValue = localStorage.getItem(THEME);
-        const prefersDarkSchema = window.matchMedia('prefers-color-scheme: dark', PREFERS_COLOR_SHCEME_DARK);
+        const prefersDarkSchema = window.matchMedia(PREFERS_COLOR_SHCEME_DARK);
 
         if (preSetteledThemeValue) {
             return preSetteledThemeValue;

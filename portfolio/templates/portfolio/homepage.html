@@ -1,101 +1,48 @@
-{% extends 'portfolio/base.html' %}
-{% load i18n %}
-{% load static %}
+{% extends 'portfolio/base.html' %} {% load i18n %} {% load static %} {% block content %}
+<div class="row justify-content-center my-3">
+  <div class="col-6">
+    <a href="https://wakatime.com/@Pro100grammist">
+      <img src="{% static 'portfolio/my_alterego.jpg' %}" class="img-fluid" />
+    </a>
+  </div>
+</div>
 
-{% block content %}
-    <div class="row justify-content-center my-3">
-        <div class="col-3">
-            <!-- Dropdown for Hard Skills -->
-            <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" id="hardSkillsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Full Stack Python
-                </button>
-                <div class="dropdown-menu animated" aria-labelledby="hardSkillsDropdown">
-                    <ul class="skills-list">
-                        {% for skill in hard_skills.all %}
-                            <li class="animate"><a href="{{ skill.link }}"><span class="hard-skills-text"><span>{{ skill.title }}</span></span></a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </div>
+<div class="row justify-content-center mb-3">
+  <div class="col-md-9 text-center">
+    <h1 id="hometext" class="font-weight-bold">
+      Hi, I'm <span class="nick-name-text">Pro100grammer</span>, Full Stack
+      Python Developer
+    </h1>
+  </div>
+</div>
 
-        <div class="col-6">
-            <img src="{% static 'portfolio/my_alterego.jpg' %}" class="img-fluid">
-            <!-- Example image -->
-            <!-- <h1 id="hometext" class="font-weight-bold">Welcome to the homepage SenPy Interactive</h1> -->
-        </div>
-
-        <div class="col-3 text-right">
-            <!-- Dropdown for Necessary & Useful -->
-            <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" id="NUDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Necessary & Useful
-                </button>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="NUDropdown">
-                    <ul class="skills-list">
-                        {% for item in necessary_useful.all %}
-                            <li><a href="{{ item.url_name }}"><span class="soft-skills-text"><span>{{ item.title }}</span></span></a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </div>
+<h2 class="mt-3">Projects</h2>
+<hr />
+<div class="row">
+  {% for project in projects %}
+  <div class="col-lg-4 col-md-6">
+    {% if project.url %}
+    <a href="{{ project.url }}">
+      <img src="{{ project.image.url }}" class="img-fluid w-100 mb-2" />
+    </a>
+    {% else %}
+    <img src="{{ project.image.url }}" class="img-fluid w-100 mb-2" />
+    {% endif %}
+    <h3>{{ project.title }}</h3>
+    <div class="text-container">
+      <p>{{ project.description }}</p>
     </div>
+  </div>
+  {% endfor %}
+</div>
 
-    <div class="row justify-content-center mb-3">
-        <div class="col-md-9 text-center">
-            <h1 id="hometext" class="font-weight-bold">Welcome to the homepage SenPy Interactive</h1>
-        </div>
-    </div>
-
-    <h2 class="mt-3">Projects</h2>
-    <hr>
-    <div class="row">
-        {% for project in projects %}
-            <div class="col-lg-4 col-md-6">
-                {% if project.url %}
-                    <a href="{{ project.url }}">
-                        <img src="{{ project.image.url }}" class="img-fluid w-100 mb-2">
-                    </a>
-                {% else %}
-                    <img src="{{ project.image.url }}" class="img-fluid w-100 mb-2">
-                {% endif %}
-                <h3>{{ project.title }}</h3>
-                <div class="text-container">
-                    <p>{{ project.description }}</p>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
-
-{% endblock %}
-
-{% block extra_scripts %}
-    <!-- Audio elements on a page for sound -->
-    <audio id="clickSound" src="{% static 'portfolio/sounds/mouse_click.mp3' %}"></audio> <!-- mouse click sound -->
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            $('.dropdown-toggle').on('click', function() {
-                var $menu = $(this).next('.dropdown-menu');
-                $menu.toggleClass('animated');
-                $menu.find('li').toggleClass('animate');
-            });
-        });
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var clickSound = document.getElementById('clickSound');
-            var button = document.querySelector('.btn-primary');
-
-            button.addEventListener('click', function() {
-                clickSound.currentTime = 0;
-                clickSound.play();
-            });
-        });
-    </script>
+{% endblock %} {% block extra_scripts %}
+<!-- Audio elements on a page for sound -->
+<audio
+  id="clickSound"
+  src="{% static 'portfolio/sounds/mouse_click.mp3' %}"
+></audio>
+<!-- mouse click sound -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{% static 'portfolio/js/homepage.js' %}"></script>
 {% endblock %}
