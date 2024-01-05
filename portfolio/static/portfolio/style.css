@@ -64,6 +64,7 @@ body {
   overflow-x: hidden;
 }
 
+/* Header */
 .nav-link-text {
   padding: 10px;
   display: inline-block;
@@ -79,8 +80,35 @@ body {
   gap: 16px;
 }
 
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
 .logo-text {
-  color: var(--logo-text-color);
+  margin-left: 10px;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 15px;
+}
+
+.navbar-toggler {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.navbar-toggler-icon {
+  background-color: #333;
+  width: 30px;
 }
 
 /* Button styling */
@@ -97,6 +125,7 @@ body {
   border: none;
   border-radius: 50%;
   font-size: 24px;
+  margin-left: auto;
   transition: background-color 0.5s, color 0.5s;
   cursor: pointer;
 }
@@ -188,8 +217,60 @@ body {
   animation-delay: 1.4s;
 }
 
+/* Nick name Pro100grammer effects */
+.nick-name-text {
+  animation: twinkling 2s infinite, typing 4s steps(20) infinite;
+}
+
+@keyframes flicker {
+
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    opacity: 1;
+  }
+
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999%,
+  71% {
+    opacity: 0.5;
+  }
+}
+
+.nick-name-text {
+  animation: flicker 3s infinite;
+}
+
+/* Циклічне друкування тексту */
+@keyframes type {
+  from {
+    width: 0;
+  }
+}
+
+#hometext {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: type 3s steps(40) infinite;
+}
 
 /* Common styles for images */
+.img-main {
+  max-height: 640px;
+  width: auto;
+  display: block;
+  margin: auto;
+}
+
 .img-fluid {
   max-width: 100%;
   height: auto;
