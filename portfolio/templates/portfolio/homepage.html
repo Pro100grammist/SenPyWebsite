@@ -2,7 +2,7 @@
 <div class="row justify-content-center my-3">
   <div class="col-6">
     <a href="https://wakatime.com/@Pro100grammist">
-      <img src="{% static 'portfolio/my_alterego.jpg' %}" class="img-main"/>
+      <img src="{% static 'portfolio/my_alterego.png' %}" class="img-main"/>
     </a>
   </div>
 </div>
@@ -10,8 +10,8 @@
 <div class="row justify-content-center mb-3">
   <div class="col-md-9 text-center">
     <h1 id="hometext" class="font-weight-bold">
-      Hi, I'm <span class="nick-name-text">Pro100grammer</span>, Full Stack
-      Python Developer
+      Hi, I'm <span class="nick-name-text">Pro100grammer</span><br>
+      Full Stack Python Developer
     </h1>
   </div>
 </div>
@@ -28,7 +28,7 @@
     {% else %}
     <img src="{{ project.image.url }}" class="img-fluid w-100 mb-2" />
     {% endif %}
-    <h3>{{ project.title }}</h3>
+    <h3 class="text-container-title">{{ project.title }}</h3>
     <div class="text-container">
       <p>{{ project.description }}</p>
     </div>
