@@ -248,13 +248,45 @@ body {
 }
 
 .text-container-title {
+  text-align: center;
   color: var(--home-text-color);
 }
+
 
 .text-container {
+  display: flex;
   color: var(--home-text-color);
 }
 
+.text-container p {
+  flex: 1;
+}
+
+/* each project map is placed in a frame and upscaled when you hover the mouse */
+.project {
+  border: 1px solid #ccc;
+  padding: 10px;
+  transition: transform 0.3s ease;
+  margin: 10px;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+/* Стилі для екранів шириною 768px і більше */
+@media screen and (min-width: 768px) {
+  .project {
+    width: 30%; /* Змінюємо ширину проекту на 30% на екранах шириною 768px і більше */
+  }
+}
+
+/* Стилі для екранів шириною менше 768px */
+@media screen and (max-width: 767px) {
+  .project {
+    width: 100%; /* Змінюємо ширину проекту на 100% на екранах шириною менше 768px */
+  }
+}
 
 @keyframes type {
   from {
